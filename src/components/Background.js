@@ -1,19 +1,23 @@
-import React from 'react'
-import { ImageBackground, StyleSheet, KeyboardAvoidingView } from 'react-native'
-import { theme } from '../core/theme'
+import React from 'react';
+import {ImageBackground, StyleSheet, KeyboardAvoidingView} from 'react-native';
+import {theme} from '../core/theme';
+import {Paragraph} from 'react-native-paper';
 
-export default function Background({ children }) {
+export default function Background({children}) {
   return (
     <ImageBackground
       source={require('../assets/background_dot.png')}
       resizeMode="repeat"
-      style={styles.background}
-    >
+      style={styles.background}>
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         {children}
       </KeyboardAvoidingView>
+
+      <Paragraph style={styles.ref}>
+        Developed by: Dharmendra jagodana
+      </Paragraph>
     </ImageBackground>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -31,4 +35,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-})
+  ref: {
+    flex: 0.1,
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
