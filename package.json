@@ -8,8 +8,10 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "build-android": "sh ./sh/android-debug.sh",
-    "release-android": "sh ./sh/android-release.sh"
+    "build-android": "sh ./sh/before.sh && sh ./sh/android-debug.sh",
+    "release-android": "sh ./sh/before.sh && sh ./sh/android-release.sh",
+    "build-ios": "sh ./sh/before.sh && sh ./sh/ios-debug.sh",
+    "release-ios": "sh ./sh/before.sh && sh ./sh/ios-release.sh"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
