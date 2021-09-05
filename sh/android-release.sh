@@ -1,5 +1,5 @@
 #!/bin/bash
-SCRIPT_PATH="./sh/remove-old-build.sh"
+SCRIPT_PATH="./sh/android-remove-old-build.sh"
 bash "$SCRIPT_PATH"
 
 echo "old build removed"
